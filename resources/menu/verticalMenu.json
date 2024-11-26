@@ -1,0 +1,76 @@
+{
+    "menu": [
+        {
+            "name": "Dashboard",
+            "icon": "fa-solid fa-chart-pie",
+            "permissions": ["admin.home"],
+            "submenu": [
+                {
+                    "url": "admin.home",
+                    "name": "General",
+                    "permissions": ["admin.home"]
+                }
+            ]
+        },
+        {
+            "menuHeader": "APPS & PAGES",
+            "permissions": ["admin.manage.profile", "admin.manage.yape", "admin.roles"]
+        },
+        {
+            "name": "Administrar cuentas",
+            "icon": "fa-solid fa-user-gear",
+            "permissions": ["admin.manage.profile", "admin.manage.yape"],
+            "submenu": [
+                {
+                    "url": "admin.manage.profile",
+                    "name": "Perfil personal",
+                    "permissions": ["admin.manage.profile"]
+                },
+                {
+                    "url": "admin.manage.yape",
+                    "name": "Yape QR",
+                    "permissions": ["admin.manage.yape"]
+                }
+            ]
+        },
+        {
+            "name": "Seguridad",
+            "icon": "fa-solid fa-unlock-keyhole",
+            "permissions": ["admin.roles"],
+            "submenu": [
+                {
+                    "url": "admin.roles",
+                    "name": "Roles",
+                    "permissions": ["admin.roles"]
+                }
+            ]
+        },
+        {
+            "icon": "fa-solid fa-comments",
+            "name": "Notificaciones",
+            "permissions": ["admin.home"]
+        },
+        {
+            "menuHeader": "FORMS & TABLES",
+            "permissions": ["admin.users", "admin.categories", "admin.products"]
+        },
+        {
+            "url": "admin.users",
+            "icon": "fa-solid fa-users",
+            "name": "Usuarios",
+            "permissions": ["admin.users"]
+        },
+        {
+            "url": "admin.categories",
+            "icon": "fa-solid fa-tags",
+            "name": "Categorias",
+            "permissions": ["admin.categories"]
+        },
+        {
+            "url": "admin.products",
+            "icon": "fa-solid fa-cart-flatbed-suitcase",
+            "name": "Productos",
+            "permissions": ["admin.products"]
+        }
+    ]
+}
