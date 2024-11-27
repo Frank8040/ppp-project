@@ -1,2 +1,17 @@
 
 @import url('./scrollbar.css');
+
+
+.fondo {
+    background-image: url("/images/fondo_upeu.png");
+    background-position: 35% 15%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 768px) {
+    .fondo {
+        background-size: cover;
+    }
+}

@@ -1,16 +1,16 @@
 @props(['active', 'icon', 'message' => null])
 
 @php
-    $classes = $active ? 'font-bold !text-black' : 'hover:text-gray-100 dark:hover:text-white group';
+    $classes = $active ? 'font-bold !text-white bg-[#00345B]' : 'hover:text-gray-600 hover:bg-gray-200 dark:hover:text-white group';
     $classIcon = $icon ? $icon : 'fa-solid fa-question';
 @endphp
 
 <a
-    {{ $attributes->merge(['class' => 'block text-gray-300 dark:text-gray-300 group truncate transition ' . $classes]) }}>
+    {{ $attributes->merge(['class' => 'block text-gray-500 px-3 py-2 group truncate transition ' . $classes]) }}>
     <div class="flex items-center justify-between">
         <div class="flex items-center lg:mx-auto lg:sidebar-expanded:mx-0">
             <span
-                class="@if ($active) {{ 'text-blue-600' }}@else{{ 'text-gray-300 dark:text-gray-500 group-hover:text-gray-100 group-hover:dark:text-gray-100 duration-500' }} @endif">
+                class="@if ($active) {{ 'text-white' }}@else{{ ' duration-500' }} @endif">
                 <i class="{{ $classIcon }} fa-fw"></i>
             </span>
             <span

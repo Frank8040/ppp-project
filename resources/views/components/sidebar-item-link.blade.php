@@ -1,12 +1,12 @@
 @props(['active'])
 
 @php
-    $classes = $active ?? false ? '!text-blue-600 font-bold' : '';
+    $classes = $active ?? false ? '!text-white font-bold bg-[#00345B]' : 'hover:text-gray-500 hover:bg-gray-200 ';
 @endphp
 
 <li class="mb-1 last:mb-0">
     <a
-        {{ $attributes->merge(['class' => 'block text-gray-400 dark:text-gray-400 hover:text-blue-500 dark:hover:text-gray-200 transition truncate ' . $classes]) }}>
+        {{ $attributes->merge(['class' => 'px-3 py-2 block text-gray-600 transition truncate ' . $classes]) }}>
         <div class="flex items-center truncate">
             <i class="fa-regular fa-circle fa-xs fa-fw"></i>
             <span

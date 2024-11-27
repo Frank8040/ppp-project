@@ -56,11 +56,6 @@
         @if (Auth::user() && $route && in_array('auth:sanctum', $route->gatherMiddleware()))
             <div class="flex h-[100dvh] overflow-hidden relative">
 
-                <div class="bg-gradient-to-bl to-blue-900 from-sky-600 w-[90%] absolute top-0 right-0 py-36 rounded-bl-full"></div>
-
-                <div class="bg-gradient-to-bl to-blue-900 from-sky-600 absolute bottom-0 p-16 rounded-tr-full"></div>
-                <div class="bg-gradient-to-bl to-blue-900 from-sky-600 absolute bottom-0 right-0 p-24 rounded-tl-full"></div>
-
                 <x-app.sidebar :variant="$attributes['sidebarVariant']" />
 
                 <!-- Content area -->
@@ -69,13 +64,13 @@
 
                     <x-app.header :variant="$attributes['headerVariant']" />
 
-                    <main class="grow px-3 pb-2">
+                    <main class="grow p-3">
 
-                        <div class="text-xs sm:text-sm text-gray-100 mb-4 bg-gradient-to-bl to-blue-900 from-sky-600 rounded-md px-4 py-2">
-                            <a href="{{ route('admin.home') }}" class="text-gray-100 hover:text-gray-200">
+                        <div class="text-xs sm:text-sm text-gray-600 mb-4 rounded-md py-2">
+                            <a href="{{ route('admin.home') }}" class="text-gray-400 hover:text-gray-700">
                                 <i class="fa-solid fa-house-chimney"></i> /
                             </a>
-                            <span class="text-gray-300">@yield('header')</span>
+                            <span class="text-gray-400">@yield('header')</span>
                             / <span class="font-semibold">@yield('section')</span>
                         </div>
 

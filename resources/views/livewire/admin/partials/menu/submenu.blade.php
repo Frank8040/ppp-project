@@ -1,6 +1,6 @@
 <div x-show="open" x-collapse.duration.500ms x-cloak>
     @if (isset($menu))
-        <ul class="pl-0.5 mt-2 lg:hidden lg:sidebar-expanded:block">
+        <ul class="mt-1 lg:hidden lg:sidebar-expanded:block">
             @foreach ($menu as $submenu)
                 <x-sidebar-item-link
                     href="{{ isset($submenu['url']) ? (filter_var($submenu['url'], FILTER_VALIDATE_URL) ? $submenu['url'] : route($submenu['url'])) : 'javascript:void(0)' }}"

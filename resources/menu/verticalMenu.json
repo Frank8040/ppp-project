@@ -1,16 +1,10 @@
 {
     "menu": [
         {
-            "name": "Dashboard",
-            "icon": "fa-solid fa-chart-pie",
-            "permissions": ["admin.home"],
-            "submenu": [
-                {
-                    "url": "admin.home",
-                    "name": "General",
-                    "permissions": ["admin.home"]
-                }
-            ]
+            "url": "admin.home",
+            "icon": "fa-solid fa-home",
+            "name": "Inicio",
+            "permissions": ["admin.home"]
         },
         {
             "menuHeader": "APPS & PAGES",
@@ -41,11 +35,6 @@
             ]
         },
         {
-            "icon": "fa-solid fa-comments",
-            "name": "Notificaciones",
-            "permissions": ["admin.home"]
-        },
-        {
             "menuHeader": "FORMS & TABLES",
             "permissions": ["admin.users", "admin.categories", "admin.products"]
         },
@@ -69,7 +58,7 @@
         },
         {
             "name": "PPP",
-            "icon": "fa-solid fa-user-gear",
+            "icon": "fa-solid fa-file-lines",
             "permissions": ["admin.register-ppp"],
             "submenu": [
                 {
@@ -78,12 +67,6 @@
                     "permissions": ["admin.register-ppp"]
                 }
             ]
-        },
-        {
-            "url": "admin.monitor",
-            "icon": "fa-solid fa-cart-flatbed-suitcase",
-            "name": "Monitorear",
-            "permissions": ["admin.monitor"]
         }
     ]
 }
