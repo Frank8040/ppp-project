@@ -71,9 +71,9 @@
                     <x-table-thead>
                         <tr>
                             <th class="p-3 font-normal text-center">Usuario</th>
-                            <th class="p-3 font-normal">DNI</th>
-                            <th class="p-3 font-normal">Roles</th>
-                            <th class="p-3 font-normal">Estado</th>
+                            <th class="p-3 font-normal">Email</th>
+                            <th class="p-3 font-normal">Teléfono</th>
+                            <th class="p-3 font-normal">Área</th>
                             <th class="p-3 font-normal">Actualizado</th>
                             <th class="p-3 font-normal text-center">Acciones</th>
                         </tr>
@@ -83,41 +83,15 @@
                             <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <td class="p-3">
                                     <div class="flex gap-3">
-                                        <div class="relative">
-                                            <img class="w-10 h-10 border-2 rounded-full object-cover"
-                                                src="{{ $user->profile_photo_path ? Storage::url($user->profile_photo_path) : $user->profile_photo_url }}"
-                                                alt="{{ $user->name }}">
-                                            <span
-                                                class="absolute bottom-0 right-0 p-1 border-white border-2 bg-{{ $user->online === 1 ? 'green' : 'red' }}-600 rounded-full"></span>
-                                        </div>
-                                        <div>
-                                            <div class="font-semibold">{{ $user->name }} {{ $user->surnames }}</div>
-                                            <div class="text-gray-600 dark:text-gray-500">{{ $user->email }}</div>
-                                        </div>
+                                        <div class="font-semibold">{{ $user->name }} {{ $user->surnames }}</div>
                                     </div>
                                 </td>
-                                <td class="p-3">{{ $user->dni }}</td>
-                                <td class="p-3">
-                                    @if (optional($user->roles->first())->name)
-                                        <div class="inline-flex gap-1">
-                                            <x-tag class="w-max" role="{{ $user->roles->first()->id }}">
-                                                {{ $user->roles->first()->name }}
-                                            </x-tag>
-                                            @if ($user->roles()->count() !== 1)
-                                                <x-tag class="w-max" role="{{ $user->roles->first()->id }}">
-                                                    {{ '+' . $user->roles()->count() - 1 }}
-                                                </x-tag>
-                                            @endif
-                                        </div>
-                                    @else
-                                        <x-tag class="w-max" role="null">No asignado</x-tag>
-                                    @endif
-                                </td>
+                                <td class="p-3">{{ $user->email }}</td>
+                                <td class="p-3">{{ $user->phone }}</td>
                                 <td class="p-3">
                                     <div
-                                        class="text-xs font-bold text-{{ $user->status === 1 ? 'green' : 'red' }}-500 uppercase">
-                                        <i class="fa-regular fa-square-check fa-lg mr-1"></i>
-                                        {{ $user->status === 1 ? 'Activo' : 'Inactivo' }}
+                                        class="text-xs font-bold text-{{ $user->area != null ? 'green' : 'red' }}-500 uppercase">
+                                        {{ $user->area != null ? $user->area : 'No asignado' }}
                                     </div>
                                 </td>
                                 <td class="p-3">

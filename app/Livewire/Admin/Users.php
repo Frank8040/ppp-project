@@ -82,7 +82,6 @@ class Users extends Component
                 unset($userData['password']);
             }
             $this->user->update($userData);
-            event(new UserCreated($userData));
             toast()->success('Usuario actualizado correctamente', 'Mensaje de éxito')->push();
         }
         $this->closeModals();
@@ -98,7 +97,6 @@ class Users extends Component
     {
         $user = User::find($this->itemId)->delete();
         toast()->success('Usuario eliminado correctamente', 'Mensaje de éxito')->push();
-        event(new UserCreated($user));
         $this->reset('isOpenDelete', 'itemId');
     }
 
