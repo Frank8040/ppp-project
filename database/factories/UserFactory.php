@@ -33,6 +33,7 @@ class UserFactory extends Factory
             'phone' =>  fake()->numerify('###') . ' ' . fake()->numerify('###') . ' ' . fake()->numerify('###'),
             'email' => fake()->unique()->safeEmail(),
             'code' => fake()->unique()->numberBetween(100000000, 999999999), // Genera 9 dígitos exactos
+            'ciclo' => 'IV',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'two_factor_secret' => null,

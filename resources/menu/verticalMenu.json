@@ -14,22 +14,17 @@
         },
         {
             "menuHeader": "APPS & PAGES",
-            "permissions": ["admin.manage.profile", "admin.manage.yape", "admin.roles"]
+            "permissions": ["admin.manage.profile", "admin.roles"]
         },
         {
             "name": "Administrar cuentas",
             "icon": "fa-solid fa-user-gear",
-            "permissions": ["admin.manage.profile", "admin.manage.yape"],
+            "permissions": ["admin.manage.profile"],
             "submenu": [
                 {
                     "url": "admin.manage.profile",
                     "name": "Perfil personal",
                     "permissions": ["admin.manage.profile"]
-                },
-                {
-                    "url": "admin.manage.yape",
-                    "name": "Yape QR",
-                    "permissions": ["admin.manage.yape"]
                 }
             ]
         },

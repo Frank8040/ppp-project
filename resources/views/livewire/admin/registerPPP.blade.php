@@ -2,11 +2,6 @@
 @section('section', __('Registrar PPP'))
 
 <div>
-
-    {{-- @include('livewire.admin.modal.user') --}}
-
-    {{-- @include('livewire.admin.modal.assign-role-user') --}}
-
     @include('livewire.admin.modal.delete')
 
     <x-app.card>
@@ -38,6 +33,7 @@
                                     <x-input-label label="Código" wire:model="studentData.code" />
                                     <x-input-label label="Nombres y Apellidos" wire:model="studentData.names" />
                                     <x-input-label label="DNI" wire:model="studentData.dni" />
+                                    <x-input-label label="Ciclo" wire:model="studentData.ciclo" />
                                 </div>
                             </div>
                             <div class="w-full">

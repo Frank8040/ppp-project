@@ -76,6 +76,7 @@ class RegisterPPP extends Component
         $this->studentData['code'] = $user->code;
         $this->studentData['names'] = $user->name . '' . $user->surnames;
         $this->studentData['dni'] = $user->dni;
+        $this->studentData['ciclo'] = $user->ciclo;
 
         $companyUser = DB::table('company_users')
             ->where('user_id', $user->id)

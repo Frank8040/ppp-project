@@ -23,6 +23,28 @@ class UserSeeder extends Seeder
             'password' => bcrypt('12345678')
         ])->assignRole('Super-admin');
 
+        User::create([
+            'dni' => '77489050',
+            'name' => 'Marcos',
+            'surnames' => 'Torres Mamani',
+            'phone' => fake()->numerify('###') . ' ' . fake()->numerify('###') . ' ' . fake()->numerify('###'),
+            'code' => '202165321',
+            'status' => true,
+            'email' => 'marcos@gmail.com',
+            'password' => bcrypt('12345678')
+        ])->assignRole('Administrador');
+
+        User::create([
+            'dni' => '77298045',
+            'name' => 'Ana',
+            'surnames' => 'Flores Mamani',
+            'phone' => fake()->numerify('###') . ' ' . fake()->numerify('###') . ' ' . fake()->numerify('###'),
+            'code' => '202162585',
+            'status' => true,
+            'email' => 'ana@gmail.com',
+            'password' => bcrypt('12345678')
+        ])->assignRole('Secretaría');
+
         $users = User::factory(5)->create();
 
         foreach ($users as $user) {

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('surnames');
             $table->string('phone');
+            $table->string('ciclo')->nullable();
             $table->boolean('status')->default(false);
             $table->boolean('online')->default(false)->nullable();
             $table->string('email')->unique();
