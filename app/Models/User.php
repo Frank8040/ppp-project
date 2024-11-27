@@ -31,6 +31,7 @@ class User extends Authenticatable
         'surnames',
         'phone',
         'code',
+        'ciclo',
         'status',
         'online',
         'email',

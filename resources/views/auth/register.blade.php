@@ -21,8 +21,13 @@
                 <x-input id="email" icon="envelope" label="{{ __('Email') }}" placeholder="" type="email"
                     name="email" :value="old('email')" required autocomplete="username" />
 
-                <x-input id="code" label="{{ __('Código') }}" placeholder="" type="text" name="code"
+                <div class="flex justify-between gap-5">
+                    <x-input id="code" label="{{ __('Código') }}" placeholder="" type="text" name="code"
                     :value="old('code')" required autocomplete="code" />
+
+                    <x-input id="ciclo" label="{{ __('Ciclo') }}" placeholder="" type="text" name="ciclo"
+                        :value="old('ciclo')" required autocomplete="ciclo" />
+                </div>
 
                 <div class="flex justify-between gap-5">
                     <x-input id="dni" label="{{ __('DNI') }}" placeholder="" type="text" name="dni"
