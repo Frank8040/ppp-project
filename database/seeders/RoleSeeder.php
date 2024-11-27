@@ -38,5 +38,6 @@ class RoleSeeder extends Seeder
 
         Permission::create(['name' => 'admin.monitor', 'section' => 'Monitorear', 'description' => 'Monitorear PPP'])->syncRoles([$role2, $role3]);
         Permission::create(['name' => 'admin.register-ppp', 'section' => 'Registrar', 'description' => 'Registrar PPP'])->syncRoles([$role2, $role3]);
+        Permission::create(['name' => 'admin.supervisor-ppp', 'section' => 'Supervisor', 'description' => 'Supervisor PPP'])->syncRoles([$role2, $role3, $role5]);
     }
 }

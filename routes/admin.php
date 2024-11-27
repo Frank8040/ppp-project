@@ -6,6 +6,7 @@ use App\Livewire\Admin\MonitorPPP;
 use App\Livewire\Admin\Profile;
 use App\Livewire\Admin\RegisterPPP;
 use App\Livewire\Admin\Roles;
+use App\Livewire\Admin\SupervisorPPP;
 use App\Livewire\Admin\Users;
 use App\Livewire\Admin\Yape;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,6 @@ Route::prefix('admin')->middleware([
     Route::get('/tabla/productos', Dashboard::class)->middleware('can:admin.products')->name('admin.products');
 
     Route::get('/tabla/registrar-ppp', RegisterPPP::class)->middleware('can:admin.register-ppp')->name('admin.register-ppp');
+    Route::get('/tabla/supervisor-ppp', SupervisorPPP::class)->middleware('can:admin.supervisor-ppp')->name('admin.supervisor-ppp');
     Route::get('/tabla/monitorear-ppp', MonitorPPP::class)->middleware('can:admin.monitor')->name('admin.monitor');
 });

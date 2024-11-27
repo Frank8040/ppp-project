@@ -36,13 +36,19 @@
         },
         {
             "menuHeader": "FORMS & TABLES",
-            "permissions": ["admin.users", "admin.categories", "admin.products"]
+            "permissions": ["admin.users", "admin.categories", "admin.products", "admin.supervisor-ppp"]
         },
         {
             "url": "admin.users",
             "icon": "fa-solid fa-users",
             "name": "Usuarios",
             "permissions": ["admin.users"]
+        },
+        {
+            "url": "admin.supervisor-ppp",
+            "icon": "fa-solid fa-users",
+            "name": "Supervisor",
+            "permissions": ["admin.supervisor-ppp"]
         },
         {
             "url": "admin.categories",
