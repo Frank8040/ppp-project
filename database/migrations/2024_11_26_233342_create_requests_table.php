@@ -11,10 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('yapes', function (Blueprint $table) {
+        Schema::create('requests', function (Blueprint $table) {
             $table->id();
-            $table->string('titular');
-            $table->string('telefono');
+            $table->foreignId('user_id')->constrained(); // Relación con users
+            $table->string('paso')->nullable();
+            $table->string('linea')->nullable();
+            $table->boolean('estado')->default(false);
+            $table->string('descripcion')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('yapes');
+        Schema::dropIfExists('requests');
     }
 };

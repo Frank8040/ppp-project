@@ -46,5 +46,8 @@ class RoleSeeder extends Seeder
         Permission::create(['name' => 'admin.products.create', 'section' => 'Productos', 'description' => 'Crear productos'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'admin.products.edit', 'section' => 'Productos', 'description' => 'Editar productos'])->syncRoles([$role1, $role2]);
         Permission::create(['name' => 'admin.products.delete', 'section' => 'Productos', 'description' => 'Eliminar productos'])->syncRoles([$role1]);
+
+        Permission::create(['name' => 'admin.monitor', 'section' => 'Monitorear', 'description' => 'Monitorear PPP'])->syncRoles([$role2, $role3]);
+        Permission::create(['name' => 'admin.register-ppp', 'section' => 'Registrar', 'description' => 'Registrar PPP'])->syncRoles([$role3]);
     }
 }

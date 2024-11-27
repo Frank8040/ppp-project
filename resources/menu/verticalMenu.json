@@ -71,6 +71,24 @@
             "icon": "fa-solid fa-cart-flatbed-suitcase",
             "name": "Productos",
             "permissions": ["admin.products"]
+        },
+        {
+            "name": "PPP",
+            "icon": "fa-solid fa-user-gear",
+            "permissions": ["admin.register-ppp"],
+            "submenu": [
+                {
+                    "url": "admin.register-ppp",
+                    "name": "Registrar",
+                    "permissions": ["admin.register-ppp"]
+                }
+            ]
+        },
+        {
+            "url": "admin.monitor",
+            "icon": "fa-solid fa-cart-flatbed-suitcase",
+            "name": "Monitorear",
+            "permissions": ["admin.monitor"]
         }
     ]
 }
