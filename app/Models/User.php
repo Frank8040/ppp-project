@@ -32,6 +32,7 @@ class User extends Authenticatable
         'phone',
         'code',
         'ciclo',
+        'area',
         'status',
         'online',
         'email',

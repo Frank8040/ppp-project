@@ -11,6 +11,8 @@ class UserForm extends Form
     public $name;
     public $surnames;
     public $phone;
+    public $code;
+    public $area;
     public $email;
     public $status;
     public $password;
@@ -24,6 +26,8 @@ class UserForm extends Form
             'surnames' => 'required|min:3',
             'phone' => 'required|min:11',
             'email' => 'required|email|max:255|unique:users,email' . ($this->id ? ',' . $this->id : ''),
+            'code' => 'required',
+            'area' => '',
             'status' => 'required',
             'password' => ($this->id ? 'nullable' : 'required|min:8') ,
             'password_confirmation' => ($this->id ? 'nullable' : 'required|min:8|same:password'),

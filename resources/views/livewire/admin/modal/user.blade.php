@@ -15,12 +15,16 @@
                         </div>
                     @endif
                     <div class="col-span-2 flex flex-col gap-3">
-                        <x-input-label for="form.name" label="Nombres" wire:model.live="form.name" type="text"
-                            disabled="{{ $showUser }}" />
-                        <x-input-label for="form.surnames" label="Apellidos" wire:model.live="form.surnames"
-                            type="text" disabled="{{ $showUser }}" />
+                        <div class="grid grid-cols-2 gap-3">
+                            <x-input-label for="form.name" label="Nombres" wire:model.live="form.name" type="text"
+                                disabled="{{ $showUser }}" />
+                            <x-input-label for="form.surnames" label="Apellidos" wire:model.live="form.surnames"
+                                type="text" disabled="{{ $showUser }}" />
+                        </div>
                         <x-input-label for="form.email" label="Correo electrónico" wire:model.live="form.email"
                             type="email" disabled="{{ $showUser }}" />
+                        <x-input-label for="form.code" label="Código" wire:model.live="form.code"
+                            type="text" disabled="{{ $showUser }}" />
                     </div>
                 </div>
                 @if (!$showUser && !$itemId)
@@ -45,6 +49,13 @@
                         <option value="" selected>Seleccione una opcion..</option>
                         <option value="0">Inactivo</option>
                         <option value="1">Activo</option>
+                    </x-select-label>
+                    <x-select-label for="form.area" label="Área" wire:model.live="form.area"
+                        disabled="{{ $showUser }}">
+                        <option value="" selected>Seleccione una opcion..</option>
+                        <option value="Ingeniería de Software">Ingeniería de Software</option>
+                        <option value="Redes">Redes</option>
+                        <option value="Gestión de TI">Gestión de TI</option>
                     </x-select-label>
                 </div>
             </div>
